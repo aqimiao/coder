@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿光拉练数据可视化大屏展示</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/myMap.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>寿光拉练（第七组）数据可视化大屏展示</h1>
+        <div class="showTime">当前时间：2024年11月<span></span></div>
+    </header>
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>
+                    柱状图-田柳镇各村种植面积 <a href="javascript:;">黄瓜</a>
+                    <a href="javacript:;">西红柿</a>
+                </h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>折线图-每日新会员人数及下单数量</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- <div class="panel pie">
+                <h2>饼形图-工程师年龄分布</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div> -->
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>76</li>
+                        <li>11</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>农商1号会员人数</li>
+                        <li>会员下单次数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="chart"></div>
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel bar1">
+                <h2>柱状图-每日会员目标完成度</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <!-- <div class="panel line1">
+                <h2>折线图-公司人员流动</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div> -->
+            <div class="panel pie1">
+                <h2>饼形图-田柳镇各作物种植面积占比</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
+
+    <script>
+        (function(fn) {
+            fn();
+            setInterval(fn, 1000);
+        })(function() {
+            var dt = new Date();
+            document.querySelector(".showTime span").innerHTML =
+                dt.getDate() + "日-" +
+                dt.getHours() + "时" +
+                dt.getMinutes() + "分" +
+                dt.getSeconds() + "秒";
+        });
+    </script>
+
+
+</body>
+
+</html>
